@@ -8,6 +8,7 @@ module.exports = {
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
         alias: {
           '@fontFamily': './src/assets/fonts/index.ts',
+          '@svg': './src/assets/images/svg/index.ts',
         },
       },
     ],

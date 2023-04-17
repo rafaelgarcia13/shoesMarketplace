@@ -23,6 +23,12 @@
       "@fontFamily": [
         "assets/fonts/index.ts"
       ],
+      "@svg": [
+        "assets/images/svg/index.ts"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
     },
   },
   "exclude": [
