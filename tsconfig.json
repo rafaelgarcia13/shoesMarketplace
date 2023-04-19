@@ -18,17 +18,14 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./src",
     "paths": {
       "@fontFamily": [
-        "assets/fonts/index.ts"
+        "./src/assets/fonts/index.ts"
       ],
       "@svg": [
-        "assets/images/svg/index.ts"
+        "./src/assets/images/svg/index.ts"
       ],
-      "@components/*": [
-        "components/*"
-      ],
+      "@components/*": ["./src/components/*"],
     },
   },
   "exclude": [

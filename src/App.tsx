@@ -1,4 +1,4 @@
-import { ShoesScroll } from 'components/shoesScroll/ShoesScroll';
+import { ShoesScroll } from '@components/shoesScroll/ShoesScroll';
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 

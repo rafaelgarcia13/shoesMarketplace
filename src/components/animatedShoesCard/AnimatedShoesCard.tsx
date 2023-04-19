@@ -1,9 +1,8 @@
 import React from 'react';
 import { Animated } from 'react-native';
 import { View } from 'react-native';
-import { useWindowDimensions } from 'react-native';
 
-import { BrandName, Price, ShoesName, CardContainer } from './styles';
+import { BrandName, Price, ShoesName } from './styles';
 
 interface AnimatedShoesCardProps {
   index: number;
