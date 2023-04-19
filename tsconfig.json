@@ -19,7 +19,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": {
-      "@fontFamily": [
+      "@fonts": [
         "./src/assets/fonts/index.ts"
       ],
       "@svg": [

@@ -7,7 +7,7 @@ module.exports = {
         root: ['./'],
         extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
         alias: {
-          '@fontFamily': './src/assets/fonts/index.ts',
+          '@fonts': './src/assets/fonts/index.ts',
           '@svg': './src/assets/images/svg/index.ts',
           '@components': './src/components',
         },

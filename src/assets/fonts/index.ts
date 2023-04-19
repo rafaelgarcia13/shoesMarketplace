@@ -1,15 +1,15 @@
-interface IFont {
+interface IFontFamily {
   light: string;
   regular: string;
   medium: string;
   bold: string;
 }
 
-const fonts: IFont = {
+const fontFamily: IFontFamily = {
   light: 'Roboto-Light',
   regular: 'Roboto-Regular',
   medium: 'Roboto-Medium',
   bold: 'Roboto-Bold',
 };
 
-export { fonts };
+export { fontFamily };

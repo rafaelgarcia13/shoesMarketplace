@@ -1,21 +1,21 @@
 import styled from 'styled-components/native';
-import { fonts } from '@fontFamily';
+import { fontFamily } from '@fonts';
 
 const BrandName = styled.Text`
   font-size: 26px;
-  font-family: ${fonts.regular};
+  font-family: ${fontFamily.regular};
   color: white;
 `;
 
 const ShoesName = styled.Text`
   font-size: 26px;
-  font-family: ${fonts.bold};
+  font-family: ${fontFamily.bold};
   color: blue;
 `;
 
 const Price = styled.Text`
   font-size: 26px;
-  font-family: ${fonts.regular};
+  font-family: ${fontFamily.regular};
   color: white;
 `;
 
