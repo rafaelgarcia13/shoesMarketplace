@@ -1,5 +1,6 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import { fontFamily } from '@fonts';
+import { Animated } from 'react-native';
 
 const BrandName = styled.Text`
   font-size: 26px;
@@ -10,7 +11,7 @@ const BrandName = styled.Text`
 const ShoesName = styled.Text`
   font-size: 26px;
   font-family: ${fontFamily.bold};
-  color: blue;
+  color: black;
 `;
 
 const Price = styled.Text`
@@ -31,4 +32,16 @@ const CardContainer = styled.View<CardContainerProps>`
   padding: 16px;
 `;
 
-export { BrandName, ShoesName, Price, CardContainer };
+interface AnimatedViewProps {
+  backgroundColor: string;
+}
+
+const AnimatedView = styled(Animated.View)<AnimatedViewProps>`
+  border-radius: 40px;
+  padding: 24px;
+  margin-horizontal: 16px;
+  align-items: center;
+  background-color: ${(props) => props.backgroundColor};
+`;
+
+export { BrandName, ShoesName, Price, CardContainer, AnimatedView };

@@ -1,53 +1,48 @@
-import React from 'react';
-import { Animated } from 'react-native';
+import { RedShoes } from '@svg';
+import React, { useRef } from 'react';
+import { Animated, TouchableOpacity } from 'react-native';
 import { View } from 'react-native';
+import { Shoes } from '../../shoesData';
 
-import { BrandName, Price, ShoesName } from './styles';
+import { BrandName, Price, ShoesName, AnimatedView } from './styles';
+import { useAnimatedShoesCard } from './useAnimatedShoesCard';
 
 interface AnimatedShoesCardProps {
   index: number;
   cardWidth: number;
   scrollX: Animated.Value;
-  item: { spacerItem?: boolean; id: number };
+  shoesInfo: Shoes;
 }
 
 const AnimatedShoesCard: React.FC<AnimatedShoesCardProps> = ({
   index,
   scrollX,
-  item,
+  shoesInfo,
   cardWidth,
 }) => {
-  const inputRange = [
-    (index - 2) * cardWidth, //previous cards
-    (index - 1) * cardWidth, //actual card
-    index * cardWidth, //next card
-  ];
-  const translateY = scrollX.interpolate({
-    inputRange,
-    outputRange: [0, -50, 0],
-  });
-  const opacity = scrollX.interpolate({
-    inputRange,
-    outputRange: [0.4, 1, 0.4],
-  });
+  const { opacity, rotateY, translateY, scaleAnimated, startScaleAnimated } =
+    useAnimatedShoesCard(index, cardWidth, scrollX);
 
   return (
-    <View style={{ width: cardWidth }} key={item.id}>
-      <Animated.View
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={startScaleAnimated}
+      style={{ width: cardWidth }}
+      key={shoesInfo.id}
+    >
+      <AnimatedView
+        backgroundColor={shoesInfo.backgroundColor}
         style={{
-          backgroundColor: 'red',
-          marginHorizontal: 16,
-          padding: 24,
-          transform: [{ translateY }],
-          borderRadius: 40,
+          transform: [{ translateY }, { rotateY }, { scale: scaleAnimated }],
           opacity: opacity,
         }}
       >
-        <BrandName>Nike</BrandName>
-        <ShoesName>Air Jordan</ShoesName>
-        <Price>R$ 10,00</Price>
-      </Animated.View>
-    </View>
+        <BrandName>{shoesInfo.brandName}</BrandName>
+        <ShoesName>{shoesInfo.shoesName}</ShoesName>
+        <Price>R$ {shoesInfo.price}</Price>
+        {React.createElement(shoesInfo.image, { width: 350, height: 350 })}
+      </AnimatedView>
+    </TouchableOpacity>
   );
 };
 

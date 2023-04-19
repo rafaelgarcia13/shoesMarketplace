@@ -18,6 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "strictPropertyInitialization": false,
     "paths": {
       "@fonts": [
         "./src/assets/fonts/index.ts"
