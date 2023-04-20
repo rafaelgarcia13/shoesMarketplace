@@ -1,10 +1,8 @@
-import { RedShoes } from '@svg';
-import React, { useRef } from 'react';
+import React from 'react';
 import { Animated, TouchableOpacity } from 'react-native';
-import { View } from 'react-native';
 import { Shoes } from '../../shoesData';
 
-import { BrandName, Price, ShoesName, AnimatedView } from './styles';
+import { BrandName, Price, ShoesName, AnimatedView, TextWrapper } from './styles';
 import { useAnimatedShoesCard } from './useAnimatedShoesCard';
 
 interface AnimatedShoesCardProps {
@@ -37,9 +35,11 @@ const AnimatedShoesCard: React.FC<AnimatedShoesCardProps> = ({
           opacity: opacity,
         }}
       >
-        <BrandName>{shoesInfo.brandName}</BrandName>
-        <ShoesName>{shoesInfo.shoesName}</ShoesName>
-        <Price>R$ {shoesInfo.price}</Price>
+        <TextWrapper>
+          <BrandName>{shoesInfo.brandName}</BrandName>
+          <ShoesName>{shoesInfo.shoesName}</ShoesName>
+          <Price>R$ {shoesInfo.price}</Price>
+        </TextWrapper>
         {React.createElement(shoesInfo.image, { width: 350, height: 350 })}
       </AnimatedView>
     </TouchableOpacity>

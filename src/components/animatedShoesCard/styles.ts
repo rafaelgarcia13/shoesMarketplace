@@ -1,22 +1,22 @@
-import styled, { css } from 'styled-components/native';
+import styled from 'styled-components/native';
 import { fontFamily } from '@fonts';
 import { Animated } from 'react-native';
 
 const BrandName = styled.Text`
-  font-size: 26px;
-  font-family: ${fontFamily.regular};
+  font-size: 36px;
+  font-family: ${fontFamily.bold};
   color: white;
 `;
 
 const ShoesName = styled.Text`
   font-size: 26px;
   font-family: ${fontFamily.bold};
-  color: black;
+  color: white;
 `;
 
 const Price = styled.Text`
   font-size: 26px;
-  font-family: ${fontFamily.regular};
+  font-family: ${fontFamily.light};
   color: white;
 `;
 
@@ -44,4 +44,9 @@ const AnimatedView = styled(Animated.View)<AnimatedViewProps>`
   background-color: ${(props) => props.backgroundColor};
 `;
 
-export { BrandName, ShoesName, Price, CardContainer, AnimatedView };
+const TextWrapper = styled.View`
+  align-items: flex-start;
+  width: 100%;
+`;
+
+export { BrandName, ShoesName, Price, CardContainer, AnimatedView, TextWrapper };

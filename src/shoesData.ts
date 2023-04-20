@@ -23,11 +23,6 @@ class Shoes {
   fakerShoes: boolean;
 }
 
-class FakerShoes extends Shoes {
-  readonly id = Math.random();
-  readonly spacerItem = true;
-}
-
 const shoesData = [
   new Shoes({ fakerShoes: true, id: 0 }),
   new Shoes({
@@ -89,4 +84,4 @@ const shoesData = [
   new Shoes({ fakerShoes: true, id: 0 }),
 ];
 
-export { shoesData, Shoes, FakerShoes };
+export { shoesData, Shoes };

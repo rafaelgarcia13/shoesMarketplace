@@ -3,7 +3,6 @@ import { useWindowDimensions, Animated, Text } from 'react-native';
 import { AnimatedShoesCard } from '@components/animatedShoesCard/AnimatedShoesCard';
 
 import { SpacerView } from './styles';
-import { RedShoes } from '@svg';
 import { shoesData } from '../../shoesData';
 
 const ShoesScroll: React.FC = () => {
