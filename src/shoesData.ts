@@ -23,65 +23,59 @@ class Shoes {
   fakerShoes: boolean;
 }
 
+const shoesColors = ['#8B96FF', '#FFC088', '#FF5959', '#D6D6D6', '#EA7272', '#5A63FF'];
+
 const shoesData = [
   new Shoes({ fakerShoes: true, id: 0 }),
   new Shoes({
     id: 1,
     brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
+    shoesName: 'Air Max - 2345',
+    price: 450.9,
     image: BlueShoes,
-    backgroundColor: 'blue',
+    backgroundColor: shoesColors[0],
+  }),
+  new Shoes({
+    id: 3,
+    brandName: 'Nike',
+    shoesName: 'Runner Epic',
+    price: 356.99,
+    image: LightBlueShoes,
+    backgroundColor: shoesColors[1],
   }),
   new Shoes({
     id: 4,
     brandName: 'Nike',
     shoesName: 'Air Jordan',
-    price: 300.0,
-    image: RedShoes,
-    backgroundColor: 'red',
-  }),
-  new Shoes({
-    id: 3,
-    brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
-    image: LightBlueShoes,
-    backgroundColor: 'blue',
+    price: 423.8,
+    image: RedBlackShoes,
+    backgroundColor: shoesColors[2],
   }),
   new Shoes({
     id: 5,
     brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
-    image: RedBlackShoes,
-    backgroundColor: 'red',
+    shoesName: 'Jump 435',
+    price: 500.9,
+    image: SilverShoes,
+    backgroundColor: shoesColors[3],
   }),
   new Shoes({
     id: 6,
     brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
-    image: SilverShoes,
-    backgroundColor: 'silver',
+    shoesName: 'Air Max - 9834',
+    price: 546.9,
+    image: WhiteRedShoes,
+    backgroundColor: shoesColors[4],
   }),
   new Shoes({
     id: 7,
     brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
-    image: WhiteRedShoes,
-    backgroundColor: 'red',
-  }),
-  new Shoes({
-    id: 2,
-    brandName: 'Nike',
-    shoesName: 'Air Jordan',
-    price: 300.0,
+    shoesName: 'Runner Epic - 823',
+    price: 254.3,
     image: DarkBlueShoes,
-    backgroundColor: 'blue',
+    backgroundColor: shoesColors[5],
   }),
-  new Shoes({ fakerShoes: true, id: 0 }),
+  new Shoes({ fakerShoes: true, id: 8 }),
 ];
 
-export { shoesData, Shoes };
+export { shoesData, Shoes, shoesColors };
