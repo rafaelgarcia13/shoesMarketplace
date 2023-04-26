@@ -1,12 +1,6 @@
 import { useRef } from 'react';
 import { Animated } from 'react-native';
 
-interface AnimatedShoesCardProps {
-  index: number;
-  cardWidth: number;
-  scrollX: Animated.Value;
-}
-
 const useAnimatedShoesCard = (
   index: number,
   cardWidth: number,
