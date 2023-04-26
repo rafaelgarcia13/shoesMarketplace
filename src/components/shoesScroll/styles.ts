@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 interface SpacerViewProps {
-  width?: number;
+  width: number;
 }
 
 const SpacerView = styled.View<SpacerViewProps>`
