@@ -40,7 +40,7 @@ const AnimatedShoesCard: React.FC<AnimatedShoesCardProps> = ({
           <ShoesName>{shoesInfo.shoesName}</ShoesName>
           <Price>R$ {shoesInfo.price}</Price>
         </TextWrapper>
-        {React.createElement(shoesInfo.image, { width: 350, height: 350 })}
+        {React.createElement(shoesInfo.image, { width: 200, height: 200 })}
       </AnimatedView>
     </TouchableOpacity>
   );
